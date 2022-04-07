@@ -9,7 +9,7 @@ export class NavbarComponent implements OnInit {
   constructor() { }
   ngOnInit() {}
 // Necessary methods for settings up dark theme below
-// Encounters problems with navigation on iOS smartphone nothin on Android,need to be improved for iPhone
+// Encounters problems with navigation on iOS smartphone nothin on Android it's all good,need to be improved for iPhone
   onClick(event: any){
     const systemDark = window.matchMedia('(prefers-color-scheme: dark)');
     systemDark.addListener(this.colorTest);
