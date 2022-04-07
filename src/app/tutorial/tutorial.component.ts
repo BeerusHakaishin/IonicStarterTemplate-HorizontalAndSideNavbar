@@ -10,9 +10,6 @@ export class TutorialComponent implements OnInit {
     initialSlide: 0,
     speed: 400
   };
-  buttonText = 'Tutorial';
   constructor() { }
-
   ngOnInit() {}
-
 }
