@@ -9,7 +9,7 @@ export class ScreensizeService {
   private isDesktop = new BehaviorSubject(false);
   constructor() { }
   onResize(size: number) {
-    console.log('size: ', size);
+    // If you need decomment this line console.log('size: ', size);
     if(size < 568){
       this.isDesktop.next(false);
     }else{

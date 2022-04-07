@@ -10,7 +10,7 @@ export class NavbarComponent implements OnInit {
   isDesktop: boolean;
   constructor(private screensizeService: ScreensizeService) {
     this.screensizeService.isDesktopView().subscribe((isDesktop) => {
-      console.log('isDesktop changed:', isDesktop);
+      // If you need decomment this line console.log('isDesktop changed:', isDesktop);
       if(this.isDesktop && !this.isDesktop){
         window.location.reload();
       }
