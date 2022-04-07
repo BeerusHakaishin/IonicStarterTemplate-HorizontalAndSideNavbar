@@ -1,6 +1,7 @@
+<!-- Side Navbar -->
 <ion-menu side="start" content-id="main-content">
   <ion-header>
-    <ion-toolbar translucent>
+    <ion-toolbar color="primary" translucent>
       <ion-title>Menu</ion-title>
     </ion-toolbar>
   </ion-header>
@@ -11,33 +12,36 @@
           <ion-icon slot="start" name="home"></ion-icon>
           <ion-label>Home</ion-label>
         </ion-item>
-      </ion-menu-toggle>
-      <ion-menu-toggle autoHide="false">
-        <ion-item button routerLink='/' detail="false">
-          <ion-icon slot="start" name="heart"></ion-icon>
-          <ion-label>Favorites</ion-label>
+      </ion-menu-toggle> <ion-menu-toggle autoHide="false">
+        <ion-item button href="https://ionicframework.com/docs/components" target="_blank" detail="false">
+          <ion-icon slot="start" name="logo-ionic"></ion-icon>
+          <ion-label>Ionic UI-Component</ion-label>
         </ion-item>
       </ion-menu-toggle>
     </ion-list>
-
     <ion-list lines="none">
       <ion-menu-toggle autoHide="false">
         <ion-item button routerLink='/tutorial' detail="false">
           <ion-icon slot="start" name="easel-outline"></ion-icon>
-          <ion-label>Show Tutorial</ion-label>
+          <ion-label>Présentation</ion-label>
         </ion-item>
       </ion-menu-toggle>
     </ion-list>
   </ion-content>
 </ion-menu>
-
+<!-- Horizontal navbar -->
 <div id="main-content">
   <ion-header>
     <ion-toolbar color="primary">
       <ion-buttons slot="start">
         <ion-menu-button></ion-menu-button>
       </ion-buttons> 
-      <ion-title>TechTeacher <ion-icon name="code-outline"></ion-icon></ion-title>
+      <ion-title>BeerusIonic-Starter <ion-icon name="code-outline"></ion-icon></ion-title>
+      <ion-icon slot="end" name="moon-outline"></ion-icon>
+      <ion-toggle color="dark" id="themeToggle" (ionChange)="onClick($event)" slot="end"></ion-toggle>
     </ion-toolbar>
   </ion-header>
 </div>
+
+
+

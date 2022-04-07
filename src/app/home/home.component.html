@@ -1,46 +1,152 @@
 <ion-card>
   <ion-card-header>
     <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-    <ion-card-title>Card Title</ion-card-title>
+    <ion-card-title class="ion-text-uppercase">Card Title</ion-card-title>
   </ion-card-header>
-
-  <ion-card-content>
+  <ion-card-content class="ion-text-wrap">
+    Keep close to Nature's heart... and break clear away, once in awhile,
+    and climb a mountain or spend a week in the woods. Wash your spirit clean.
+  </ion-card-content>
+<!-- Start nested accordion card --> 
+<ion-card>
+<!-- Accordion with Custom Icon -->
+<ion-accordion-group>
+<!-- 1st Accordion -->
+  <ion-accordion value="colors" toggle-icon="arrow-down-circle">
+    <ion-item slot="header">
+      <ion-label>Colors</ion-label>
+    </ion-item>
+    <ion-list slot="content">
+        <ion-item class="ion-activated">
+          <ion-icon name="wifi" slot="start"></ion-icon>
+          <ion-label class="ion-text-wrap">Card Link Item 1 activated</ion-label>
+          <ion-button fill="outline" slot="end" id="trigger-button">View</ion-button>
+        </ion-item>
+    </ion-list>
+  </ion-accordion>
+  <!-- 2nd Accordion -->
+  <ion-accordion value="shapes" toggle-icon="arrow-down-circle">
+    <ion-item slot="header">
+      <ion-label>Shapes</ion-label>
+    </ion-item>
+    <ion-list slot="content">
+      <ion-item class="ion-activated">
+        <ion-icon name="wifi" slot="start"></ion-icon>
+        <ion-label class="ion-text-wrap">Card Link Item 1 activated</ion-label>
+        <ion-button fill="outline" slot="end" id="trigger-button2">View</ion-button>
+      </ion-item>
+    </ion-list>
+  </ion-accordion>
+  <!-- 3th Accordion -->
+  <ion-accordion value="numbers" toggle-icon="arrow-down-circle">
+    <ion-item slot="header">
+      <ion-label>Numbers</ion-label>
+    </ion-item>
+    <ion-list slot="content">
+       <ion-item class="ion-activated">
+          <ion-icon name="wifi" slot="start"></ion-icon>
+          <ion-label class="ion-text-wrap">Card Link Item 1 activated</ion-label>
+          <ion-button fill="outline" slot="end" id="trigger-button3">View</ion-button>
+        </ion-item>
+    </ion-list>
+  </ion-accordion>
+<!-- End of All Accordion --> 
+</ion-accordion-group>
+    <ion-card-content class="ion-text-wrap">
+      This is content, without any paragraph or header tags,
+      within an ion-card-content element.
+    </ion-card-content>
+  </ion-card>
+<!-- End of nested accordion card --> 
+  <ion-card-content class="ion-text-wrap">
+    Keep close to Nature's heart... and break clear away, once in awhile,
+    and climb a mountain or spend a week in the woods. Wash your spirit clean.
+    Keep close to Nature's heart... and break clear away, once in awhile,
+    and climb a mountain or spend a week in the woods. Wash your spirit clean.
     Keep close to Nature's heart... and break clear away, once in awhile,
     and climb a mountain or spend a week in the woods. Wash your spirit clean.
   </ion-card-content>
 </ion-card>
-
-<ion-card>
-  <ion-item>
-    <ion-icon name="pin" slot="start"></ion-icon>
-    <ion-label>ion-item in a card, icon left, button right</ion-label>
-    <ion-button fill="outline" slot="end">View</ion-button>
-  </ion-item>
-
-  <ion-card-content>
-    This is content, without any paragraph or header tags,
-    within an ion-card-content element.
-  </ion-card-content>
-</ion-card>
-
-<ion-card>
-  <ion-item href="#" class="ion-activated">
-    <ion-icon name="wifi" slot="start"></ion-icon>
-    <ion-label>Card Link Item 1 activated</ion-label>
-  </ion-item>
-
-  <ion-item href="#">
-    <ion-icon name="wine" slot="start"></ion-icon>
-    <ion-label>Card Link Item 2</ion-label>
-  </ion-item>
-
-  <ion-item class="ion-activated">
-    <ion-icon name="warning" slot="start"></ion-icon>
-    <ion-label>Card Button Item 1 activated</ion-label>
-  </ion-item>
-
-  <ion-item>
-    <ion-icon name="walk" slot="start"></ion-icon>
-    <ion-label>Card Button Item 2</ion-label>
-  </ion-item>
-</ion-card>
+<!-- End of 1st Card -->
+<!-- Modals for accordion's "view" buttons - Use a trigger -->
+<!-- FOR EXAMPLE : <ion-button id="trigger-button">Click to open modal</ion-button> -->
+<ion-modal
+  [isOpen]="false"
+  [breakpoints]="[0.1, 0.5, 1]"
+  [initialBreakpoint]="0.5"
+  [swipeToClose]="true"
+  trigger="trigger-button">
+  <ng-template>
+    <ion-buttons fill="outline" slot="end">
+			<ion-button slot="icon-only" (click)="dismiss()">
+				<ion-icon color="primary" name="close-outline"></ion-icon>
+			</ion-button>
+	</ion-buttons>
+    <ion-content class="ion-padding ion-text-wrap ion-text-center">
+      Modal Content #1
+    </ion-content>
+  </ng-template>
+</ion-modal>
+<!-- Sheet Modal2 -->
+<ion-modal
+  [isOpen]="false"
+  [breakpoints]="[0.1, 0.5, 1]"
+  [initialBreakpoint]="0.5"
+  [swipeToClose]="true"
+  trigger="trigger-button2">
+  <ng-template>
+    <ion-buttons fill="outline" slot="end">
+			<ion-button slot="icon-only" (click)="dismiss()">
+				<ion-icon color="primary" name="close-outline"></ion-icon>
+			</ion-button>
+	</ion-buttons>
+    <ion-content class="ion-padding ion-text-wrap ion-text-center">
+      Modal Content #2
+    </ion-content>
+  </ng-template>
+</ion-modal>
+<!-- Sheet Modal3 -->
+<ion-modal
+  [isOpen]="false"
+  [breakpoints]="[0.1, 0.5, 1]"
+  [initialBreakpoint]="0.5"
+  [swipeToClose]="true"
+  trigger="trigger-button3">
+  <ng-template>
+    <ion-buttons fill="outline" slot="end">
+			<ion-button slot="icon-only" (click)="dismiss()">
+				<ion-icon color="primary" name="close-outline"></ion-icon>
+			</ion-button>
+	</ion-buttons>
+    <ion-content class="ion-padding ion-text-wrap ion-text-center">
+      Modal Content #3
+    </ion-content>
+  </ng-template>
+</ion-modal>
+<!-- End of Modals -->
+<!-- Demo of the ion-grid, as bootstrap the maximum width size is 12
+    offset="" can be used to offset the col  -->
+<ion-grid class="ion-text-center ion-padding ion-margin-horizontal">
+  <ion-row class="ion-justify-content-center">
+      <ion-col size="11">
+          <ion-card class="ion-padding">
+              <ion-card-subtitle class="ion-text-uppercase">Connexion</ion-card-subtitle>
+              <ion-card-header>
+                  <form>
+                      <ion-item lines="full">
+                        <ion-label position="floating"><ion-icon name="person-circle-outline"></ion-icon> Pseudo</ion-label>
+                        <ion-input formControlName="username" type="text" required></ion-input>
+                      </ion-item>
+                      <ion-item lines="full">
+                        <ion-label position="floating"><ion-icon name="key-outline"></ion-icon> Mot de passe</ion-label>
+                        <ion-input formControlName="password" type="password" required></ion-input>
+                      </ion-item>
+                    </form>
+              </ion-card-header>
+              <ion-card-content>
+                  <ion-button type="submit">Connexion</ion-button>
+              </ion-card-content>
+          </ion-card>
+      </ion-col>
+  </ion-row>
+</ion-grid>

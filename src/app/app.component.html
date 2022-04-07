@@ -1,6 +1,7 @@
 <ion-app>
   <app-navbar></app-navbar>
   <ion-content class="ion-padding">
-    <router-outlet></router-outlet>
+    <router-outlet (activate)="componentAdded($event)"></router-outlet>
   </ion-content>
+  <app-footer [ngClass]="isFooterDisplayed"></app-footer>
 </ion-app>
