@@ -8,8 +8,8 @@ import { distinctUntilChanged } from 'rxjs/operators';
 export class ScreensizeService {
   private isDesktop = new BehaviorSubject(false);
   constructor() { }
-  onResize(size) {
-    console.log('size: ',size);
+  onResize(size: number) {
+    console.log('size: ', size);
     if(size < 568){
       this.isDesktop.next(false);
     }else{
