@@ -10,5 +10,23 @@ export class NavbarComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {}
-
+// Necessary methods for settings up dark theme below
+  onClick(event: any){
+    // eslint-disable-next-line prefer-const
+    let systemDark = window.matchMedia('(prefers-color-scheme: dark)');
+    systemDark.addListener(this.colorTest);
+    if(event.detail.checked){
+      document.body.setAttribute('data-theme', 'dark');
+    }
+    else{
+      document.body.setAttribute('data-theme', 'light');
+    }
+  }
+   colorTest(systemInitiatedDark: any) {
+    if (systemInitiatedDark.matches) {
+      document.body.setAttribute('data-theme', 'dark');
+    } else {
+      document.body.setAttribute('data-theme', 'light');
+    }
+  }
 }
