@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ScreensizeService } from '../services/screensize.service';
 
 @Component({
   selector: 'app-navbar',
@@ -6,7 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
-  constructor() { }
+  isDesktop: boolean;
+  constructor(private screensizeService: ScreensizeService) {
+    this.screensizeService.isDesktopView().subscribe((isDesktop) => {
+      console.log('isDesktop changed:', isDesktop);
+      if(this.isDesktop && !this.isDesktop){
+        window.location.reload();
+      }
+      this.isDesktop = isDesktop;
+    });
+   }
   ngOnInit() {}
 // Necessary methods for settings up dark theme below
 // Encounters problems with navigation on iOS smartphone nothin on Android it's all good,need to be improved for iPhone

@@ -30,7 +30,7 @@
   </ion-content>
 </ion-menu>
 <!-- Horizontal navbar -->
-<div id="main-content">
+<div id="main-content" *ngIf="!isDesktop">
   <ion-header>
     <ion-toolbar color="primary">
       <ion-buttons slot="start">
@@ -42,6 +42,17 @@
     </ion-toolbar>
   </ion-header>
 </div>
-
+<div *ngIf="isDesktop">
+  <ion-header>
+     <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons> 
+      <ion-title>BeerusIonic-Starter DESKTOP <ion-icon name="code-outline"></ion-icon></ion-title>
+      <ion-icon slot="end" name="moon-outline"></ion-icon>
+      <ion-toggle color="dark" id="themeToggle" (ionChange)="onClick($event)" slot="end"></ion-toggle>
+    </ion-toolbar>
+  </ion-header>
+</div>
 
 
