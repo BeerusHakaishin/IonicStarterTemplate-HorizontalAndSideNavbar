@@ -10,6 +10,7 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {}
 // Necessary methods for settings up dark theme below
 // Encounters problems with navigation on iOS smartphone nothin on Android it's all good,need to be improved for iPhone
+// Disabled when using an angular routerLink only, kept when using an ion-backButton , to be tested with the ion-router !
   onClick(event: any){
     const systemDark = window.matchMedia('(prefers-color-scheme: dark)');
     systemDark.addListener(this.colorTest);
