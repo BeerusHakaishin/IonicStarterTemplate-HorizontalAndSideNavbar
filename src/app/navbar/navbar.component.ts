@@ -6,9 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
-
   constructor() { }
-
   ngOnInit() {}
 // Necessary methods for settings up dark theme below
 // Encounters problems with navigation, does not fix itself and on mobile seems not to work anymore,need to be improved
