@@ -10,7 +10,8 @@ export class ScreensizeService {
   constructor() { }
   onResize(size: number) {
     // If you need decomment this line console.log('size: ', size);
-    if(size < 568){
+    // Choose size of your choice , here Ipad is considerate as mobile
+    if(size < 1257){
       this.isDesktop.next(false);
     }else{
       this.isDesktop.next(true);

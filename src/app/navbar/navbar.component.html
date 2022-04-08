@@ -49,7 +49,18 @@
       <!-- <ion-buttons slot="start">
         <ion-menu-button></ion-menu-button>
       </ion-buttons> -->
-      <ion-title>BeerusIonic-Starter DESKTOP <ion-icon name="code-outline"></ion-icon></ion-title>
+      <ion-row class="ion-align-items-center">
+        <ion-col size="4">
+          <ion-title class="ion-text-left">Starter DESKTOP <ion-icon name="code-outline"></ion-icon></ion-title>
+        </ion-col>
+        <ion-col size="8" class="ion-text-center desktopNavBtn">
+          <ion-button fill="clear" routerLink="/home">Home <ion-icon name="home-outline"></ion-icon></ion-button>
+          <ion-button fill="clear" routerLink="/tutorial">Tutoriel <ion-icon name="code-outline"></ion-icon></ion-button>
+          <ion-button fill="clear">A Propos <ion-icon name="help-circle-outline"></ion-icon></ion-button>
+          <ion-button fill="clear">Contact <ion-icon name="accessibility-outline"></ion-icon></ion-button>
+          <ion-button fill="clear">Connexion <ion-icon name="log-in-outline"></ion-icon></ion-button>
+        </ion-col>
+      </ion-row>
     </ion-toolbar>
   </ion-header>
 </div>
