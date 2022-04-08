@@ -7,35 +7,17 @@ import { ScreensizeService } from '../services/screensize.service';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
+  // Variable used for detect ScreenChanges
   isDesktop: boolean;
   constructor(private screensizeService: ScreensizeService) {
     this.screensizeService.isDesktopView().subscribe((isDesktop) => {
       // If you need decomment this line console.log('isDesktop changed:', isDesktop);
       if(this.isDesktop && !this.isDesktop){
         window.location.reload();
+        // Reload is necessary for smooth transitions
       }
       this.isDesktop = isDesktop;
     });
    }
   ngOnInit() {}
-// Necessary methods for settings up dark theme below
-// Encounters problems with navigation on iOS smartphone nothin on Android it's all good,need to be improved for iPhone
-// Disabled when using an angular routerLink only, kept when using an ion-backButton , to be tested with the ion-router !
-  onClick(event: any){
-    const systemDark = window.matchMedia('(prefers-color-scheme: dark)');
-    systemDark.addListener(this.colorTest);
-    if(event.detail.checked){
-      document.body.setAttribute('data-theme', 'dark');
-    }
-    else{
-      document.body.setAttribute('data-theme', 'light');
-    }
-  }
-   colorTest(systemInitiatedDark: any) {
-    if (systemInitiatedDark.matches) {
-      document.body.setAttribute('data-theme', 'dark');
-    } else {
-      document.body.setAttribute('data-theme', 'light');
-    }
-  }
 }
