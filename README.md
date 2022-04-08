@@ -1,15 +1,21 @@
 # IonicStarterTemplate-HorizontalAndSideNavbar
 
-___Simple starter pour utiliser pleinement Ionic avec une navigation horizontal navbar avec burger btn plus adaptée pour Desktop qui déploie une sidenav qui as tellement d'élegance___ 
+___Simple starter pour utiliser pleinement Ionic avec une navigation horizontal adaptée Desktop
+<br>
+Celle-ci passe en navbar avec burger btn plus adaptée pour mobile/Ipad qui déploie une sidenav qui as tellement d'élegance___
+<br>
 
+-> Bootstrap && Angular Material peuvent etre importé sans aucun soucis , petite précision lors du ng add pour Angular Material : 
+<ul>
+  <li>Choisis pas de thème par défaut d'Angular Material (pas d'indigo pink etc) ,choisir le Custom , cela permettras de lier les couleurs à celles d'Ion</li>
+  <li>Cela seras bien plus pratique ensuite lors de la modification/personnalisation de couleurs dans les matInput par exemple</li>
+</ul>
 
-In case, if someone like me, encounters problems during the screenSize with as error in console in the browser: 'Menu: must have a "content" element to listen for drag events on.'
-As a result, the sidenav and the burger button did not appear.
-- Go to : node_modules\@ionic\core\dist\esm\ion-menu_3.entry.js
-- Comment the line 103:
 ```sh
-if (typeof customElements !== 'undefined') {
-     await customElements.whenDefined('ion-menu');
-     }
- ```
--> Problem solved, it works fine !
+  git clone git@github.com:BeerusHakaishin/IonicStarterTemplate-HorizontalAndSideNavbar.git
+  ```
+```sh
+  npm i
+  ```
+-> And Go !
+
