@@ -14,6 +14,7 @@ export class AppComponent {
   constructor(private screensizeService: ScreensizeService) {
     this.screensizeService.onResize(window.innerWidth);
   }
+  // Necessary for detect screensize change events
   @HostListener('window:resize' , ['$event'])
   private onResize(event){
     this.screensizeService.onResize(event.target.innerWidth);

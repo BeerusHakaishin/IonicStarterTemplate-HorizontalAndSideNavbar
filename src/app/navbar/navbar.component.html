@@ -1,5 +1,5 @@
-<!-- Side Navbar -->
-<ion-menu side="start" content-id="main-content">
+<!-- Side Navbar only if you are'nt on desktop or an ipad -->
+<ion-menu *ngIf="!isDesktop" side="start" content-id="main-content">
   <ion-header>
     <ion-toolbar color="primary" translucent>
       <ion-title>Menu</ion-title>
@@ -29,8 +29,8 @@
     </ion-list>
   </ion-content>
 </ion-menu>
-<!-- Horizontal navbar -->
-<div id="main-content" *ngIf="!isDesktop">
+<!-- Horizontal navbar for mobile vue -->
+<div *ngIf="!isDesktop" id="main-content">
   <ion-header>
     <ion-toolbar color="primary">
       <ion-buttons slot="start">
@@ -40,12 +40,15 @@
     </ion-toolbar>
   </ion-header>
 </div>
-<div id="main-content" *ngIf="isDesktop">
+<!-- Horizontal navbar for Desktop && Ipad vue -->
+<div *ngIf="isDesktop">
   <ion-header>
      <ion-toolbar color="primary">
-      <ion-buttons slot="start">
+       <!-- If you want to have sidenav menu and burger button on Desktop vue discomment the line below and add id="main-content" on div tag
+            and after delete *ngIf line 2 -->
+      <!-- <ion-buttons slot="start">
         <ion-menu-button></ion-menu-button>
-      </ion-buttons> 
+      </ion-buttons>  -->
       <ion-title>BeerusIonic-Starter DESKTOP <ion-icon name="code-outline"></ion-icon></ion-title>
     </ion-toolbar>
   </ion-header>
