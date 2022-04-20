@@ -2,7 +2,7 @@
 
 ___Simple starter pour utiliser pleinement Ionic avec une navigation horizontal adaptée Desktop
 <br>
-Celle-ci passe en navbar avec burger btn plus adaptée pour mobile/Ipad qui déploie une sidenav qui as tellement d'élegance___
+Celle-ci passe en navbar avec burger btn plus adaptée pour mobile qui déploie une sidenav qui as tellement d'élegance___
 <br>
 
 -> Bootstrap && Angular Material peuvent etre importé sans aucun soucis , petite précision lors du ng add pour Angular Material : 
